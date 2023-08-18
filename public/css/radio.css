@@ -1,0 +1,32 @@
+input[type="radio"]{
+    display: none;
+}
+.vote label {
+    position: relative;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8em;
+    border: 3px solid black;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+}
+.vote label::before{
+    content: "";
+    height: 2em;
+    width: 2em;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+input[type="radio"]:checked + label::before{
+    height: 2em;
+    width: 2em;
+    border: 0.45em solid white;
+    background-color: black;
+}
+input[type="radio"]:checked + label{
+    background-color: black;
+    color: white;
+}
